@@ -1,0 +1,11 @@
+/workspaces/Data-Engineering-with-Rust/vector-fruit-salad/target/debug/deps/ppv_lite86-9a4676852c33124a.rmeta: /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/lib.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/soft.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/types.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/x86_64/mod.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/x86_64/sse2.rs
+
+/workspaces/Data-Engineering-with-Rust/vector-fruit-salad/target/debug/deps/libppv_lite86-9a4676852c33124a.rlib: /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/lib.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/soft.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/types.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/x86_64/mod.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/x86_64/sse2.rs
+
+/workspaces/Data-Engineering-with-Rust/vector-fruit-salad/target/debug/deps/ppv_lite86-9a4676852c33124a.d: /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/lib.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/soft.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/types.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/x86_64/mod.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/x86_64/sse2.rs
+
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/lib.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/soft.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/types.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/x86_64/mod.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/x86_64/sse2.rs:

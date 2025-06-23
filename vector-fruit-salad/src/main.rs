@@ -1,3 +1,36 @@
+/*
+This program creates a fruit salad by scrambling (shuffling) a list of fruit.
+A vector is a growable array. It can grow or shrink in size and is one of the most
+useful data structures in Rust. A vector is represented using the Vec<T> type.
+*/
+
+// SliceRandom trait is a part of rand crate, which allows you to perform random operations on slices(&[T] and &mut [T]), 
+// such as shuffling.
+use rand::seq::SliceRandom; // rand is a random number generation library in Rust
+use rand::thread_rng;
+
 fn main() {
-    println!("Hello, world!");
+    let mut fruit = vec![
+        "Orange",
+        "Fig",
+        "Pomegranate",
+        "Cherry",
+        "Apple",
+        "Pear",
+        "Peach",
+    ];
+
+    // Scramble (shuffle) the fruit
+    let mut rng = thread_rng();
+    fruit.shuffle(&mut rng);
+
+    // Print out the fruit salad
+    println!("Fruit Salad:");
+    for (i, item) in fruit.iter().enumerate() {
+        if i != fruit.len() - 1 {
+            print!("{}, ", item);
+        } else {
+            println!("{}", item);
+        }
+    }
 }
