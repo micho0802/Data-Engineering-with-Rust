@@ -66,8 +66,7 @@ fn calculate_weights(years_active: &mut HashMap<String, i32>) -> HashMap<String,
         let normalized_year = (year - min_year) as f64 / (max_year - min_year) as f64;
         let weight = (normalized_year * 99.0) as i32 + 1;  // weight between 1 and 100
         weights.insert(language.to_string(), weight);
-    }
-    
+    } 
     weights
 }
 
@@ -81,8 +80,13 @@ fn main() {
 
     let weights = calculate_weights(&mut init_languages);
     
+    let mut sorted: Vec<_> = weights.iter().collect();
+    sorted.sort_by(|a, b| a.1.cmp(b.1));
+
     println!("Language weighing from 1-100 by age (1 is newest and 100 is oldest):");
-    for (language, weight) in &weights {
+    for (language, weight) in sorted {
         println!("{}: {}", language, weight);
     }
+
+    
 }
