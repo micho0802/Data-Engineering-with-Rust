@@ -1,10 +1,34 @@
 use std::collections::HashMap;
-use std::io;
+use std::io::{self, Write};
 
 fn ask_user_input() -> HashMap<String, i32> {
     let mut languages = HashMap::new();
     println!("Enter programming languages and their creation years (type 'done' to finish):");
-    
+
+    loop {
+        print!("Language name: ");
+        io::stdout().flush().unwrap();
+        let mut language = String::new();
+        io::stdin().read_line(&mut language).unwrap();
+        let language = language.trim();
+        if language.eq_ignore_ascii_case("done") {
+            break;
+        }
+        print!("Creation year: ");
+        io::stdout().flush().unwrap();
+        let mut year = String::new();
+        io::stdin().read_line(&mut year).unwrap();
+        let year = match year.trim().parse::<i32>() {
+            Ok(y) => y,
+            Err(_) => {
+                println!("Invalid year. Please enter a valid integer.");
+                continue;
+            }
+        };
+        languages.insert(language.to_string(), year);
+    }
+    languages
+
 }
 
 fn init_languages() -> HashMap<String, i32> {
@@ -48,8 +72,14 @@ fn calculate_weights(years_active: &mut HashMap<String, i32>) -> HashMap<String,
 }
 
 fn main() {
-    let mut languages = init_languages();
-    let weights = calculate_weights(&mut languages);
+    let mut init_languages = init_languages();
+    
+    let user_languages = ask_user_input();
+    for (language, year) in user_languages {
+        init_languages.insert(language, year);
+    }
+
+    let weights = calculate_weights(&mut init_languages);
     
     println!("Language weighing from 1-100 by age (1 is newest and 100 is oldest):");
     for (language, weight) in &weights {
