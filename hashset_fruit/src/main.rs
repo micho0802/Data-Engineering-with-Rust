@@ -1,8 +1,8 @@
+use rand::prelude::IndexedRandom;
 use rand::seq::SliceRandom;
 use rand::thread_rng;
-use std::collections::HashSet;
+use std::collections::{HashMap, HashSet};
 use std::io;
-use rand::prelude::IndexedRandom;
 
 fn ask_user_number() -> u8 {
     println!("How many number of random fruit?");
@@ -43,4 +43,20 @@ fn main() {
     }
 
     println!("Number of unique fruits generated: {}", fruit_set.len());
+
+    let mut fruit_counts: HashMap<&str, u32> = HashMap::new();
+
+    for _ in 0..number_of_fruits {
+        let fruit = generate_fruit();
+        *fruit_counts.entry(fruit).or_insert(0) += 1;
+    }
+
+    println!("Fruit counts:");
+    for (fruit, count) in &fruit_counts {
+        println!("{}: {}", fruit, count);
+    }
+    println!(
+        "\nNumber of unique fruits generated: {}",
+        fruit_counts.len()
+    );
 }
