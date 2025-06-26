@@ -1,6 +1,12 @@
 use rand::seq::SliceRandom;
 use rand::thread_rng;
 use std::collections::HashSet;
+use std::io;
+
+fn ask_user_number() -> u8 {
+    println!("How many number of random fruit?");
+    
+}
 
 fn generate_fruit() -> &'static str {
     let fruits = [
