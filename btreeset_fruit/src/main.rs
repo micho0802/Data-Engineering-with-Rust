@@ -46,5 +46,11 @@ fn main() {
         println!("{}: {:?}", amount, fruit_set);
         remove_fruit(&mut fruit_set);
         println!("Set after removal: {:?}", fruit_set);
+    
+    println!("All unquie fruits in reverse order:");
+    for fruit in fruit_set.iter().rev() {
+        println!("{}", fruit);
+    }
+        
     }
 }
