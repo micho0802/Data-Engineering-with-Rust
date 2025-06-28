@@ -1,21 +1,13 @@
 format:
 	cargo fmt --quiet
 
-test:
-	cargo test --quiet
-
-run:
-	cargo run --quiet
-
 build:
 	cargo build --quiet
 
 lint:
 	cargo clippy --quiet
 
-clean:
-	cargo clean
+run:
+	cargo run --quiet
 
-.PHONY: format test run build lint clean
-
-all: format test run build lint
+all: format build lint run
