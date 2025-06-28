@@ -7,7 +7,15 @@ test:
 run:
 	cargo run --quiet
 
+build:
+	cargo build --quiet
+
 lint:
 	cargo clippy --quiet
 
-all: format test run lint
+clean:
+	cargo clean
+
+.PHONY: format test run build lint clean
+
+all: format test run build lint
